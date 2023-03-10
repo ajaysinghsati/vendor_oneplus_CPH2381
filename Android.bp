@@ -25,6 +25,25 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
+cc_library {
+    name: "platform-bootclasspath",
+    srcs: ["BootclasspathBuilder.java"],
+    visibility: [
+        "//visibility:public",
+    ],
+    // Add the following line to the existing visibility_rules section
+    visibility_rules: [
+        "//vendor/oneplus/CPH2381/...": ["//:*"],
+    ],
+    target: {
+        android: {
+            srcs: ["BootclasspathBuilder.java"],
+        },
+    },
+    // ...
+}
+
+
 android_app_import {
 	name: "TimeService",
 	owner: "oneplus",
