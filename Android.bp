@@ -26,8 +26,8 @@ cc_prebuilt_library_shared {
 }
 
 namespace "vendor/oneplus/CPH2381" {
-    // Define the WfdCommon module
-    cc_library {
+
+   cc_library {
         name: "WfdCommon",
         srcs: ["WfdCommon.cpp"],
         shared_libs: ["libfoo"],
