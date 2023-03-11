@@ -25,17 +25,6 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
-namespace "vendor/oneplus/CPH2381" {
-
-   cc_library {
-        name: "WfdCommon",
-        srcs: ["WfdCommon.cpp"],
-        shared_libs: ["libfoo"],
-        cflags: ["-Wall"],
-    }
-
-    
-}
 
 
 
