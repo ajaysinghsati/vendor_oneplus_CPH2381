@@ -36,7 +36,7 @@ cc_library {
 			srcs: ["proprietary/framework/WfdCommon.jar"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/framework/lib64/WfdCommon.jar"],
+			srcs: ["proprietary/framework/WfdCommon.jar"],
 		},
 	},
 	compile_multilib: "both",
