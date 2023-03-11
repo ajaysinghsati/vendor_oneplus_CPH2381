@@ -28,20 +28,24 @@ cc_prebuilt_library_shared {
 cc_library {
     name: "platform-bootclasspath",
     srcs: ["BootclasspathBuilder.java"],
-    visibility: [
-        "//visibility:public",
-    ],
-    // Add the following line to the existing visibility_rules section
-    visibility_rules: [
-        "//vendor/oneplus/CPH2381/...": ["//:*"],
-    ],
-    target: {
-        android: {
-            srcs: ["BootclasspathBuilder.java"],
-        },
-    },
-    // ...
+    strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/framework/WfdCommon.jar"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/framework/lib64/WfdCommon.jar"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
 }
+
+
 
 
 android_app_import {
