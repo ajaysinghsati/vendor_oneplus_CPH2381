@@ -25,6 +25,28 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
+// vendor/oneplus/CPH2381/proprietary/Android.bp
+
+cc_prebuilt_library_shared {
+    name: "wfdcommon",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["lib/libwfdcommon.so"],
+        },
+        android_arm64: {
+            srcs: ["lib64/libwfdcommon.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
 
 
 
