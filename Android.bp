@@ -35,10 +35,10 @@ cc_prebuilt_library_shared {
     },
     target: {
         android_arm: {
-            srcs: ["lib/libwfdcommon.so"],
+            srcs: ["proprietary/framework/WfdCommon.jar"],
         },
         android_arm64: {
-            srcs: ["lib64/libwfdcommon.so"],
+            srcs: ["proprietary/framework/WfdCommon.jar"],
         },
     },
     compile_multilib: "both",
