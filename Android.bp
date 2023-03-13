@@ -5,30 +5,6 @@
 soong_namespace {
 }
 // Remove this module definition.
-platform_bootclasspath {
-    name: "platform-bootclasspath",
-    classpath_fragment: "core-current",
-    bootclasspath_fragments: [
-        "core-current",
-        "conscrypt-current",
-        "okhttp-current",
-        "apache-xml-current",
-        "core-junit-current",
-        "legacy-test-support-current",
-    ],
-    
-    optional: true,
-    sdk_version: "current",
-    dex_preopt: {
-        enabled: true,
-        profile_guided: true,
-    },
-    dex_preopt_image: {
-        enabled: true,
-        profile_guided: true,
-    },
-    java_libs: ["wfdcommon-prebuilt"],
-}
 
 
 
