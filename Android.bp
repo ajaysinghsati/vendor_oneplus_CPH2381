@@ -16,11 +16,7 @@ platform_bootclasspath {
         "core-junit-current",
         "legacy-test-support-current",
     ],
-    java_libs: [
-        "core-oj",
-        "core-libart",
-        "core-icu4j",
-    ],
+    
     optional: true,
     sdk_version: "current",
     dex_preopt: {
